@@ -176,7 +176,7 @@ const CLASSES = [
 // CÍRCULOS
 const CIRCULOS = ["0","1","2","3","4","5","6","7","8","9"];
 
-// ARRAY DE MAGIAS (vamos preencher depois)
+// ARRAY DE MAGIAS
 let spells = [
 
 {
@@ -188,13 +188,9 @@ tempo: "1 ação",
 alcance: "18 metros",
 componentes: "V, S",
 duracao: "Concentração, até 1 minuto",
-descricao: `Você tenta suprimir emoções fortes em um grupo de pessoas. Cada humanoide em uma esfera de 6 metros de raio, centrada em um ponto que você escolher dentro do alcance, deve realizar um teste de resistência de Carisma; uma criatura pode escolher falhar nesse teste, se desejar.
-
-Se uma criatura falhar na resistência, escolha um dentre os dois efeitos a seguir.
-
-Você pode suprimir qualquer efeito que esteja fazendo uma criatura estar enfeitiçada ou amedrontada. Quando essa magia terminar, qualquer efeito suprimido volta a funcionar, considerando que sua duração não tenha acabado nesse meio tempo.
-
-Alternativamente, você pode tornar um alvo indiferente a criaturas que ele esteja hostil. Essa indiferença termina se o alvo for ferido ou for alvo de uma magia ou se ele testemunhar qualquer um de seus amigos sendo ferido. Quando a magia termina, a criatura se torna hostil novamente, a menos que o Mestre determine o contrário.`
+descricao: `Você tenta suprimir emoções fortes em um grupo de pessoas. Cada humanoide em uma esfera de 6 metros de raio, centrada em um ponto que você escolher dentro do alcance, deve realizar um teste de resistência de Carisma; uma criatura pode escolher falhar nesse teste, se desejar. Se uma criatura falhar na resistência, escolha um dentre os dois efeitos a seguir.
+Você pode suprimir qualquer efeito que esteja deixando a criatura enfeitiçada ou amedrontada. Quando essa magia terminar, qualquer efeito suprimido volta a funcionar, considerando que sua duração não tenha acabado nesse meio tempo.
+Alternativamente, você pode tornar um alvo indiferente às criaturas que você escolher que forem hostis a ele. Essa indiferença acaba se o alvo for atacado ou ferido por uma magia ou se ele testemunhar qualquer dos seus amigos sendo ferido. Quando a magia terminar, a criatura se tornará hostil novamente, a não ser que o Mestre diga o contrário.`
 },
 
 {
@@ -204,15 +200,11 @@ classes: ["Clérigo"],
 escola: "Adivinhação",
 tempo: "1 ação",
 alcance: "Pessoal",
-componentes: "V, S, M (incenso e uma oferenda apropriada)",
+componentes: "V, S, M (incenso e uma oferenda apropriada para sacrifício à sua religião, juntos valendo, no mínimo, 25 po, consumidos pela magia)",
 duracao: "Instantânea",
-descricao: `Sua magia e seu esforço lhe permitem fazer uma pergunta sobre um objetivo, evento ou atividade que ocorrerá dentro de 7 dias.
-
-O Mestre oferece uma resposta verdadeira. A resposta pode ser uma frase curta, uma rima críptica ou um presságio.
-
-A magia leva em consideração qualquer possível resultado, incluindo mudanças que podem ocorrer com base nas ações dos personagens.
-
-Se você conjurar a magia duas ou mais vezes antes de completar um descanso longo, existe uma chance cumulativa de 25% de que cada conjuração após a primeira forneça uma leitura aleatória.`
+descricao: `Sua magia e uma oferenda colocam você em contato com um deus ou servo divino. Você faz uma única pergunta a respeito de um objetivo, evento ou atividade específico que irá ocorrer dentro de 7 dias. O Mestre oferece uma resposta confiável. A resposta deve ser uma frase curta, uma rima enigmática ou um presságio.
+A magia não leva em consideração qualquer possível circunstância que possa mudar o que está por vir, como a conjuração de magias adicionais ou a perda ou ganho de um companheiro.
+Se você conjurar a magia duas ou mais vezes antes de completar seu próximo descanso longo, existe uma chance cumulativa de 25 por cento de cada conjuração, depois da primeira que você fez, ter um resultado aleatório. O Mestre faz essa jogada secretamente.`
 },
 
 {
@@ -222,11 +214,10 @@ classes: ["Clérigo", "Paladino"],
 escola: "Abjuração",
 tempo: "1 ação",
 alcance: "9 metros",
-componentes: "V, S, M (uma pequena fita de tecido)",
+componentes: "V, S, M (uma pequena fita de tecido branco)",
 duracao: "8 horas",
-descricao: `Sua magia inspira seus aliados com vigor e determinação. Escolha até três criaturas dentro do alcance. O máximo de pontos de vida de cada alvo aumenta em 5 e cada alvo ganha 5 pontos de vida atuais.
-
-Em níveis superiores: Quando você conjura essa magia usando um espaço de magia de 3º nível ou superior, os pontos de vida aumentam em 5 adicionais para cada nível acima do 2º.`
+descricao: `Sua magia inspira seus aliados com vigor e determinação. Escolha até três criaturas dentro do alcance. O máximo de pontos de vida e os pontos de vida atuais de cada alvo aumentam em 5, pela duração.
+Em Níveis Superiores. Quando você conjurar essa magia usando um espaço de magia de 3° nível ou superior, os pontos de vida dos alvos aumentam em 5 pontos adicionais para cada nível do espaço acima do o 2°.`
 },
 
 {
@@ -234,17 +225,13 @@ nome: "Alarme",
 circulo: "1",
 classes: ["Mago", "Patrulheiro"],
 escola: "Abjuração",
-tempo: "1 minuto",
+tempo: "1 minuto (ritual)",
 alcance: "9 metros",
-componentes: "V, S, M (um pequeno sino e um fio prateado)",
+componentes: "V, S, M (um pequeno sino e um pequeno fio de prata)",
 duracao: "8 horas",
-descricao: `Você coloca um alarme contra intrusão em uma área. Escolha uma porta, janela ou área dentro do alcance.
-
-Até a magia acabar, um alarme alertará você sempre que uma criatura Pequena ou maior tocar ou entrar na área protegida.
-
-Ao conjurar a magia, você pode designar criaturas que não ativam o alarme.
-
-Você pode escolher se o alarme será audível ou mental. Um alarme mental alerta você se estiver dentro de 1,5 km da área protegida.`
+descricao: `Você coloca um alarme para intrusos desavisados. Escolha uma porta, uma janela ou uma área dentro do alcance que não seja maior que 6 metros cúbicos. Até a magia acabar, um alarme alerta você sempre que uma criatura Miúda ou maior tocarem ou entrarem na área protegida. Quando você conjura a magia, você pode designar as criaturas que não ativarão o alarme. Você também escolhe se o alarme será mental ou audível.
+Um alarme mental alerta você com um silvo na sua mente, se você estiver a até de 1,5 quilômetro da área protegida. Esse silvo acordará você se você estiver dormindo.
+Um alarme audível produz o som de um sino de mão por 10 minutos num raio de 18 metros.`
 },
 
 {
@@ -256,13 +243,25 @@ tempo: "10 minutos",
 alcance: "18 metros",
 componentes: "V, S",
 duracao: "Instantânea",
-descricao: `Você solicita a ajuda de uma entidade extraplanar.
+descricao: `Você suplica a uma entidade transcendental por ajuda. O ser deve ser conhecido por você: seu deus, um primordial, um príncipe demônio ou algum outro ser de poder cósmico. Essa entidade envia um celestial, um corruptor ou um elemental leal a ela para ajudar você, fazendo a criatura aparecer em um espaço desocupado dentro do alcance. Se você conhecer o nome de uma criatura especifica, você pode falar o nome quando conjurar essa magia para requisitar essa criatura, do contrário, você pode receber uma criatura diferente de qualquer forma (à escolha do Mestre).
+Quando a criatura aparecer, ela não está sob nenhuma compulsão para se comportar de um modo em particular. Você pode pedir a criatura que realize um serviço em troca de um pagamento, mas ela não é obrigada a fazê-lo. A tarefa solicitada pode variar de simples (carregue-nos voando para o outro lado do abismo ou nos ajude a lutar essa batalha) a complexa (espione nossos inimigos ou nos proteja durante nossa incursão na masmorra). Você deve ser capaz de se comunicar com a criatura para barganhar os serviços dela.
+O pagamento pode ser feito de várias formas. Um celestial pode requerer uma generosa doação de ouro ou itens mágicos para um templo aliado, enquanto que um corruptor pode exigir um sacrifício vivo ou uma parte dos espólios. Algumas criaturas podem trocar seus serviços por uma missão feita por você.
+Como regra geral, uma tarefa que possa ser medida em minutos, exigirá um pagamento de 100 po por minuto. Uma tarefa medida em horas exigirá 1.000 po por hora. E uma tarefa medida em dias (até 10 dias) exigirá 10.000 po por dia. O Mestre pode ajustar esses pagamentos baseado nas circunstâncias pelas quais a magia foi conjurada. Se a tarefa estiver de acordo com o caráter da criatura, o pagamento pode ser reduzido à metade, ou mesmo dispensado. Tarefas que não proporcionem perigo, tipicamente requerem apenas metade do pagamento sugerido, enquanto que tarefas especialmente perigosas podem exigir um grande presente. As criaturas raramente aceitarão tarefas que pareçam suicidas.
+Após a criatura completar a tarefa ou quando a duração acordada para o serviço expirar, a criatura retornará para seu plano natal depois de relatar sua partida a você, se apropriado para a tarefa e se possível. Se você não for capaz de acertar um preço para os serviços da criatura, ela imediatamente voltará para o seu plano natal.
+Uma criatura convidada para se juntar ao seu grupo, conta como um membro dele, recebendo sua parte total na premiação de pontos de experiência.`
+},
 
-A criatura deve ser conhecida por você e deve estar disposta a ajudar. O Mestre escolhe a criatura apropriada.
-
-A criatura ajudará você em troca de pagamento. O custo depende da tarefa.
-
-A entidade realiza a tarefa da melhor forma possível e depois retorna ao seu plano de origem.`
+{
+nome: "Aljava Veloz",
+circulo: "5",
+classes: ["Patrulheiro"],
+escola: "Transmutação",
+tempo: "1 ação bônus",
+alcance: "Toque",
+componentes: "V, S, M (uma aljava contendo, pelo menos, uma munição)",
+duracao: "Concentração, até 1 minuto",
+descricao: `Você transmuta sua aljava para que ela produza um suprimento interminável de munições não-mágicas, que parecem saltar na sua mão quando você tenta pega-las.
+Em cada um dos seus turnos, até a magia acabar, você pode usar uma ação bônus para realizar dois ataques com uma arma que use munição de uma aljava. Cada vez que você fizer tais ataques à distância, sua aljava, magicamente, repõe a munição que você usou com uma munição não-mágica similar. Qualquer munição criada por essa magia se desintegra quando a magia acaba. Se a aljava não estiver mais com você, a magia acaba.`
 },
 
 {
@@ -272,17 +271,41 @@ classes: ["Druida", "Mago"],
 escola: "Transmutação",
 tempo: "1 ação",
 alcance: "Pessoal",
-componentes: "V, S, M",
+componentes: "V, S, M (uma argola de jade valendo, no mínimo, 1.500 po, que você deve colocar na sua cabeça antes de conjurar a magia)",
 duracao: "Concentração, até 1 hora",
-descricao: `Você assume a forma de uma criatura diferente.
+descricao: `Você assume a forma de uma criatura diferente, pela duração. A nova forma pode ser qualquer criatura com um nível de desafio igual ao seu nível ou menor. A criatura não pode ser nem um constructo nem um morto-vivo e você deve ter visto esse tipo de criatura pelo menos uma vez. Você se transforma num exemplar médio da criatura, um sem quaisquer níveis de classe nem característica Conjuração.
+Suas estatísticas de jogo são substituídas pelas estatísticas da forma escolhida, no entanto, você mantem sua tendência e valores de Inteligência, Sabedoria e Carisma. Você também mantem suas proficiências em testes de resistência, além de ganhar as da nova criatura. Se a criatura tiver a mesma proficiência que você e o bônus listado nas estatísticas dela for maior que o seu, use os bônus da criatura no lugar do seu. Você não pode usar qualquer ação lendária ou de covil da nova forma.
+Você assume os pontos de vida e Dados de Vida da sua nova forma. Quando você reverter a sua forma normal, você retorna à quantidade de pontos de vida que tinha antes da transformação. Se você reverter como resultado de ter caído a 0 pontos de vida, qualquer dano excedente é recebido pela sua forma normal. Contanto que o dano excedente não reduza os pontos de vida da sua forma normal a 0, você não cairá inconsciente.
+Você mantem os benefícios de qualquer característica da sua classe, raça ou outra fonte e pode usa-las, considerando que sua nova forma é fisicamente capaz de fazê-lo. Você não pode usar quaisquer sentidos especiais que você possua (por exemplo, visão no escuro) a não ser que a nova forma também possua o sentido. Você só poderá falar se a nova forma, normalmente, puder falar.
+Quando você se transforma, você pode escolher se o seu equipamento cai no chão, é assimilado a sua nova forma ou é usado por ela. Equipamentos vestidos e carregados funcionam normalmente. O Mestre decide qual equipamento é viável para a nova forma vestir ou usar, baseado na forma e tamanho da criatura. O seu equipamento não muda de forma ou tamanho para se adaptar à nova forma e, qualquer equipamento que a nova forma não possa vestir deve, ou cair no chão ou ser assimilado por ela. Equipamentos assimilados não terão efeito nesse estado.
+Pela duração da magia, você pode usar sua ação para assumir uma forma diferente, seguindo as mesmas restrições e regras da forma anterior, com uma exceção: se sua nova forma tiver mais pontos de vida que sua forma atual, seus pontos de vida mantem o valor atual.`
+},
 
-A nova forma pode ser qualquer criatura com nível de desafio igual ou menor que o seu.
+{
+nome: "Alterar-se",
+circulo: "2",
+classes: ["Mago", "Feiticeiro"],
+escola: "Transmutação",
+tempo: "1 ação",
+alcance: "Pessoal",
+componentes: "V, S",
+duracao: "Concentração, até 1 hora",
+descricao: `Você assume uma forma diferente. Quando conjurar essa magia, escolha uma das seguintes opções, o efeito durará pela duração da magia. Enquanto a magia durar, você pode terminar uma opção com uma ação para ganhar os benefícios de uma diferente.
+Adaptação Aquática. Você adapta seu corpo para um ambiente aquático, brotando guelras e crescendo membranas entre seus dedos. Você pode respirar embaixo d’água e ganha deslocamento de natação igual a seu deslocamento terrestre.
+Mudar Aparência. Você transforam sua aparência. Você decide com o que você parece, incluindo altura, peso, traços faciais, timbre da sua voz, comprimento do cabelo, coloração e características distintas, se tiverem. Você pode ficar parecido com um membro de outra raça, apesar de nenhuma de suas estatísticas mudar. Você também não pode parecer com uma criatura de um tamanho diferente do seu, e seu formado básico permanece o mesmo; se você for bípede, você não pode usar essa magia para se tornar quadrupede, por exemplo. A qualquer momento, pela duração da magia, você pode usar sua ação para mudar sua aparência dessa forma, novamente.
+Armas Naturais. Você faz crescerem garras, presas, espinhos, chifres ou armas naturais diferentes, à sua escolha. Seus ataques desarmados causam 1d6 de dano de concussão, perfurante ou cortante, como apropriado para a arma natural que você escolheu, e você é proficiente com seus ataques desarmados. Finalmente, a arma natural é mágica e você tem +1 de bônus nas jogadas de ataque e dano que você fizer com ela.`
+},
 
-Você mantém seus pontos de vida e ganha as características da nova forma.
-
-Enquanto estiver transformado, você pode usar ações e habilidades da criatura.
-
-Se cair a 0 pontos de vida, você retorna à sua forma original.`
+{
+nome: "Amizade",
+circulo: "0",
+classes: ["Bardo", "Druida", "Patrulheiro"],
+escola: "Encantamento",
+tempo: "1 ação",
+alcance: "9 metros",
+componentes: "S, M (uma pequena quantidade de maquiagem aplicada ao rosto durante a conjuração da magia)",
+duracao: "Concentração, até 1 minuto",
+descricao: `Pela duração, você terá vantagem em todos os testes de Carisma direcionados a uma criatura, à sua escolha, que não seja hostil a você. Quando a magia acabar, a criatura perceberá que você usou maia para influenciar o humor dela, e ficará hostil a você. Uma criatura propensa a violência irá atacar você. Outra criatura pode buscar outras formas de retaliação (a critério do Mestre), dependendo da natureza da sua interação com ela.`
 },
 
 {
@@ -292,86 +315,67 @@ classes: ["Bardo", "Druida", "Patrulheiro"],
 escola: "Encantamento",
 tempo: "1 ação",
 alcance: "9 metros",
-componentes: "V, S, M (um pedaço de comida)",
+componentes: "V, S, M (um punhado de comida)",
 duracao: "24 horas",
-descricao: `Essa magia faz com que uma besta que você possa ver dentro do alcance veja você como um amigo.
-
-Se a inteligência da besta for 4 ou maior, a magia falha.
-
-A besta deve realizar um teste de resistência de Sabedoria. Se falhar, fica encantada por você.
-
-Se você ou seus aliados atacarem a criatura, a magia termina.`
-}// CONTINUAÇÃO DO ARRAY spells
-
-,
-{
-nome: "Ampliar/Reduzir",
-circulo: "2",
-classes: ["Feiticeiro", "Mago"],
-escola: "Transmutação",
-tempo: "1 ação",
-alcance: "9 metros",
-componentes: "V, S, M (um pouco de pó de ferro)",
-duracao: "Concentração, até 1 minuto",
-descricao: `Você faz com que uma criatura ou objeto que você possa ver dentro do alcance cresça ou diminua.
-
-Escolha uma criatura ou objeto que não esteja sendo vestido ou carregado. O alvo deve ser de tamanho Médio ou menor.
-
-Aumentar: O tamanho do alvo dobra em todas as dimensões, e seu peso é multiplicado por oito. O alvo tem vantagem em testes de Força e testes de resistência de Força. Seus ataques com armas causam +1d4 de dano.
-
-Reduzir: O tamanho do alvo é reduzido à metade em todas as dimensões, e seu peso é reduzido a um oitavo do normal. O alvo tem desvantagem em testes de Força e testes de resistência de Força. Seus ataques com armas causam -1d4 de dano.`
+descricao: `Essa magia deixa você convencer uma besta que você não quer prejudicar. Escolha uma besta que você possa ver dentro do alcance. Ela deve ver e ouvir você. Se a Inteligência da besta for 4 ou maior, a magia falha. Do contrário, a besta deve ser bem sucedida num teste de resistência de Sabedoria ou ficará enfeitiçada por você pela duração da magia. Se você ou um dos seus companheiros ferir o alvo, a magia termina.
+Em Níveis Superiores. Quando você conjurar essa magia usando um espaço de magia de 2° nível ou superior, você pode afetar uma besta adicional para cada nível do espaço acima do 1°.`
 },
 
 {
-nome: "Analisar Magia",
-circulo: "1",
+nome: "Ampliar Plantas",
+circulo: "3",
+classes: ["Bardo", "Druida", "Patrulheiro"],
+escola: "Transmutação",
+tempo: "1 ação ou 8 horas",
+alcance: "45 metros",
+componentes: "V, S",
+duracao: "Instantânea",
+descricao: `Essa magia canaliza vitalidade nas plantas dentro de uma área especifica. Existem dois usos possíveis para essa magia, concedendo ou benefícios imediatos ou a longo prazo.
+Se você conjurar essa magia usando 1 ação, escolha um ponto dentro do alcance. Todas as plantas normais num raio de 30 metros centrado no ponto, tornam-se espessas e carregadas. Uma criatura se movendo na área deve gastar 6 metros de movimento para cada 1,5 metro que se mover.
+Você pode excluir uma ou mais áreas de qualquer tamanho, dentro da área da magia, para não ser afetada.
+Se você conjurar essa magia ao longo de 8 horas, você fertiliza a terra. Todas as plantas num raio de 800 metros, centrado no ponto dentro do alcance, ficam enriquecidas por 1 ano. As plantas fornecerão o dobro da quantidade normal de comida quando colhidas.`
+},
+
+{
+nome: "Âncora Planar",
+circulo: "5",
 classes: ["Mago"],
-escola: "Adivinhação",
-tempo: "1 ação (ritual)",
-alcance: "Pessoal",
-componentes: "V, S, M (uma pena)",
-duracao: "Concentração, até 10 minutos",
-descricao: `Você percebe a presença de magia dentro de 9 metros de você.
+escola: "Abjuração",
+tempo: "1 ação",
+alcance: "18 metros",
+componentes: "V, S (uma joia valendo, no mínimo, 1.000 po, consumida pela magia)",
+duracao: "24 horas",
+descricao: `Com essa magia, você tenta obrigar um celestial, corruptor, elemental ou fada a servi-lo. A criatura deve estar dentro do alcance durante toda a conjuração da magia. (Tipicamente, a criatura, primeiramente, é invocada dentro de um círculo mágico invertido para mantê-la presa enquanto a magia é conjurada.) Ao completar a conjuração, o alvo deve realizar um teste de resistência de Carisma. Se falhar na resistência, ela é obrigada a servir você pela duração. Se a criatura foi invocada ou criada por outra magia, a duração da magia é estendida para se equiparar a dessa magia.
+Uma criatura obrigada deve seguir suas instruções da melhor forma que puder. Você poderia comandar a criatura a acompanhar você em uma aventura, a guardar um local ou a enviar uma mensagem. A criatura obedece ao pé da letra suas instruções, mas se a criatura for hostil a você, ela se esforçará para distorcer suas palavras para atingir seus próprios objetivos. Se a criatura atender suas instruções completamente antes da magia acabar, ela viajará até você para relatar esse fato se você estiver no mesmo plano de existência. Se você estiver em um plano de existência diferente, ela retornará para o lugar onde você a contatou e permanecerá lá até a magia acabar.
+Em Níveis Superiores. Quando você conjurar essa magia usando um espaço de magia de nível superior, a duração aumenta para 10 dias com um espaço de 6° nível, para 30 dias com um espaço de 7° nível, para 180 dias com um espaço de 8° nível e para um ano com um espaço de magia de 9° nível.`
+},
 
-Se perceber magia dessa forma, você pode usar sua ação para ver uma aura tênue ao redor de qualquer criatura ou objeto visível que possua magia.
-
-Você também aprende a escola de magia, se houver.`
+{
+nome: "Andar na Água",
+circulo: "3",
+classes: ["Clérigo", "Druida", "Feiticeiro", "Patrulheiro"],
+escola: "Transmutação",
+tempo: "1 ação",
+alcance: "9 metros",
+componentes: "V, S, M (uma rolha)",
+duracao: "1 hora",
+descricao: `Essa magia concede a habilidade de se mover através de qualquer superfície líquida – como água, ácido, lama, neve, arreia movediça ou lava – como se ela fosse chão sólido inofensivo (as criaturas atravessando lava derretida ainda podem sofrer dano do calor). Até dez criaturas voluntárias que você possa ver, dentro do alcance, ganham essa habilidade pela duração.
+Se você afetar uma criatura submersa em um líquido, a magia ergue o alvo para a superfície do líquido a uma taxa de 18 metros por rodada.`
 },
 
 {
 nome: "Animar Mortos",
 circulo: "3",
-classes: ["Clérigo", "Mago"],
+classes: ["Clérigo", "Patrulheiro"],
 escola: "Necromancia",
 tempo: "1 minuto",
 alcance: "3 metros",
-componentes: "V, S, M (um osso)",
+componentes: "V, S, M (uma gota de sangue, um pedaço de carne e uma punhado de pó de osso)",
 duracao: "Instantânea",
-descricao: `Essa magia cria um servo morto-vivo.
-
-Escolha uma pilha de ossos ou um cadáver de um humanoide Médio ou Pequeno dentro do alcance.
-
-Seu feitiço imbui o alvo com uma imitação corrompida de vida, erguendo-o como um morto-vivo.
-
-Você decide se a criatura é um esqueleto ou um zumbi. A criatura está sob seu controle por 24 horas.
-
-Em níveis superiores: Você pode animar ou reassertar controle sobre duas criaturas adicionais para cada nível de espaço acima do 3º.`
-},
-
-{
-nome: "Âncora Planar",
-circulo: "2",
-classes: ["Mago"],
-escola: "Abjuração",
-tempo: "1 ação",
-alcance: "18 metros",
-componentes: "V, S",
-duracao: "Concentração, até 1 hora",
-descricao: `Escolha uma criatura dentro do alcance.
-
-O alvo deve ser bem-sucedido em um teste de resistência de Carisma ou ficará impedido de viajar por meios extraplanares.
-
-Durante a duração, o alvo não pode se teleportar ou viajar para outro plano de existência.`
+descricao: `Essa magia cria um servo morto-vivo. Escolha uma pilha de ossos ou um corpo de um humanoide Médio ou Pequeno dentro do alcance. Sua magia imbui o alvo com uma imitação corrompida de vida, erguendo-o como uma criatura morta-viva. O alvo se torna um esqueleto, se você escolheu ossos, ou um zumbi, se você escolheu um corpo (o Mestre tem as estatísticas de jogo da criatura).
+Em cada um dos seus turnos, você pode usar uma ação bônus para comandar mentalmente qualquer criatura que você criou com essa magia, se a criatura estiver a até 18 metros de você (se você controla diversas criaturas, você pode comandar qualquer uma ou todas elas ao mesmo tempo, emitindo o mesmo comando para cada uma). Você decide qual ação a criatura irá fazer e para onde ela irá se mover durante o próximo turno dela, ou você pode emitir um comando geral, como para guardar uma câmara ou corredor especifico. Se você não der nenhum comando, as criaturas apenas se defenderão contra criaturas hostis. Uma vez que receba uma ordem, a criatura continuará a segui-la até a tarefa estar concluída.
+A criatura fica sob seu controle por 24 horas, depois disso ela para de obedecer aos seus comandos. Para manter o controle da criatura por mais 24 horas, você deve conjurar essa magia na criatura novamente, antes das 24 horas atuais terminarem. Esse uso da magia recupera seu controle sobre até quatro criaturas que você tenha animado com essa magia, ao invés de animar uma nova.
+Em Níveis Superiores. Quando você conjurar essa magia usando um espaço de magia de 4° nível ou superior, você pode animar ou recuperar o controle de duas criaturas mortas-vivas para cada nível do espaço acima do 3°. Cada uma dessas criaturas deve vir de um corpo ou pilha de ossos diferente.`
 },
 
 {
@@ -383,13 +387,7 @@ tempo: "1 ação",
 alcance: "36 metros",
 componentes: "V, S",
 duracao: "Instantânea",
-descricao: `Escolha uma criatura, objeto ou efeito mágico dentro do alcance.
-
-Qualquer magia de 3º nível ou inferior no alvo termina.
-
-Para cada magia de 4º nível ou superior, faça um teste usando sua habilidade de conjuração.
-
-A CD é 10 + nível da magia. Em caso de sucesso, a magia termina.`
+descricao: ``
 },
 
 {
@@ -401,13 +399,7 @@ tempo: "1 ação",
 alcance: "9 metros",
 componentes: "V, S",
 duracao: "8 horas",
-descricao: `Essa magia permite que você mude a aparência de qualquer número de criaturas dentro do alcance.
-
-Cada alvo pode parecer diferente: mudar roupas, armaduras, armas e outras características visuais.
-
-A magia não altera estatísticas físicas nem permite disfarces impossíveis.
-
-Uma criatura pode usar sua ação para investigar e perceber a ilusão.`
+descricao: ``
 },
 
 {
@@ -419,11 +411,7 @@ tempo: "1 ação",
 alcance: "Toque",
 componentes: "V, S, M (um pedaço de couro)",
 duracao: "8 horas",
-descricao: `Você toca uma criatura voluntária que não esteja vestindo armadura.
-
-A CA base da criatura se torna 13 + modificador de Destreza.
-
-A magia termina se o alvo vestir armadura.`
+descricao: ``
 },
 
 {
@@ -435,15 +423,7 @@ tempo: "1 ação bônus",
 alcance: "18 metros",
 componentes: "V, S",
 duracao: "1 minuto",
-descricao: `Você cria uma arma espectral flutuante dentro do alcance.
-
-Ao conjurar a magia, você pode realizar um ataque corpo a corpo com a arma.
-
-Como ação bônus, você pode mover a arma e repetir o ataque.
-
-A arma causa 1d8 + modificador de conjuração de dano de força.
-
-Em níveis superiores: O dano aumenta em 1d8 para cada dois níveis acima do 2º.`
+descricao: ``
 },
 
 {
@@ -455,11 +435,7 @@ tempo: "1 ação bônus",
 alcance: "Toque",
 componentes: "V, S",
 duracao: "Concentração, até 1 hora",
-descricao: `Você toca uma arma não mágica.
-
-Até o fim da magia, a arma se torna mágica e recebe +1 em ataques e dano.
-
-Em níveis superiores: O bônus aumenta para +2 (4º nível) ou +3 (6º nível).`
+descricao: ``
 },
 
 {
@@ -471,25 +447,7 @@ tempo: "1 ação",
 alcance: "9 metros",
 componentes: "S",
 duracao: "Concentração, até 1 rodada",
-descricao: `Você aponta para um alvo dentro do alcance.
-
-No seu próximo turno, você tem vantagem na primeira jogada de ataque contra o alvo.`
-},
-
-{
-nome: "Ataque Divino",
-circulo: "1",
-classes: ["Paladino"],
-escola: "Evocação",
-tempo: "1 ação bônus",
-alcance: "Pessoal",
-componentes: "V",
-duracao: "Concentração, até 1 minuto",
-descricao: `Sua arma brilha com poder divino.
-
-Até o fim da magia, seus ataques com arma causam dano radiante adicional de 1d4.
-
-A magia termina se você perder a concentração.`
+descricao: ``
 },
 
 {
@@ -499,20 +457,956 @@ classes: ["Clérigo"],
 escola: "Adivinhação",
 tempo: "1 minuto (ritual)",
 alcance: "Pessoal",
-componentes: "V, S, M (bastões, ossos ou runas)",
+componentes: "V, S, M (bastões marcados, ossos ou itens semelhantes no valor de 25 po)",
 duracao: "Instantânea",
-descricao: `Você recebe um presságio sobre o resultado de uma ação específica que planeja realizar.
+descricao: ``
+},
 
-O resultado pode ser:
+{
+nome: "Bênção",
+circulo: "1",
+classes: ["Clérigo", "Paladino"],
+escola: "Encantamento",
+tempo: "1 ação",
+alcance: "9 metros",
+componentes: "V, S, M (água benta)",
+duracao: "Concentração, até 1 minuto",
+descricao: ``
+},
 
-- Bom
-- Ruim
-- Ambos
-- Nenhum
+{
+nome: "Bola de Fogo",
+circulo: "3",
+classes: ["Feiticeiro", "Mago"],
+escola: "Evocação",
+tempo: "1 ação",
+alcance: "45 metros",
+componentes: "V, S, M (uma pequena bola de guano de morcego e enxofre)",
+duracao: "Instantânea",
+descricao: ``
+},
 
-A magia considera apenas eventos dentro de 30 minutos.
+{
+nome: "Boca Encantada",
+circulo: "2",
+classes: ["Bardo", "Mago"],
+escola: "Ilusão",
+tempo: "1 minuto",
+alcance: "9 metros",
+componentes: "V, S, M (um pequeno pedaço de favo de mel e jade)",
+duracao: "Até ser dissipada",
+descricao: ``
+},
 
-Existe uma chance cumulativa de erro se conjurada várias vezes.`
+{
+nome: "Borrão",
+circulo: "2",
+classes: ["Feiticeiro", "Mago"],
+escola: "Ilusão",
+tempo: "1 ação",
+alcance: "Pessoal",
+componentes: "V",
+duracao: "Concentração, até 1 minuto",
+descricao: ``
+},
+
+{
+nome: "Braços de Hadar",
+circulo: "1",
+classes: ["Bruxo"],
+escola: "Conjuração",
+tempo: "1 ação",
+alcance: "Pessoal (3 metros)",
+componentes: "V, S",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Bruxaria",
+circulo: "1",
+classes: ["Feiticeiro", "Bruxo"],
+escola: "Evocação",
+tempo: "1 ação bônus",
+alcance: "36 metros",
+componentes: "V, S",
+duracao: "Concentração, até 1 minuto",
+descricao: ``
+},
+
+{
+nome: "Caminhar na Água",
+circulo: "3",
+classes: ["Clérigo", "Druida", "Patrulheiro"],
+escola: "Transmutação",
+tempo: "1 ação (ritual)",
+alcance: "9 metros",
+componentes: "V, S, M (um pedaço de cortiça)",
+duracao: "1 hora",
+descricao: ``
+},
+
+{
+nome: "Caminhar nas Sombras",
+circulo: "6",
+classes: ["Bruxo"],
+escola: "Conjuração",
+tempo: "1 ação bônus",
+alcance: "Pessoal",
+componentes: "V",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Cegueira/Surdez",
+circulo: "2",
+classes: ["Bardo", "Clérigo", "Feiticeiro", "Mago"],
+escola: "Necromancia",
+tempo: "1 ação",
+alcance: "9 metros",
+componentes: "V",
+duracao: "1 minuto",
+descricao: ``
+},
+
+{
+nome: "Chama Sagrada",
+circulo: "0",
+classes: ["Clérigo"],
+escola: "Evocação",
+tempo: "1 ação",
+alcance: "18 metros",
+componentes: "V, S",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Chicote de Espinhos",
+circulo: "0",
+classes: ["Druida"],
+escola: "Transmutação",
+tempo: "1 ação",
+alcance: "9 metros",
+componentes: "V, S, M (o caule de uma planta com espinhos)",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Círculo Mágico",
+circulo: "3",
+classes: ["Clérigo", "Mago", "Paladino"],
+escola: "Abjuração",
+tempo: "1 minuto",
+alcance: "3 metros",
+componentes: "V, S, M (água benta ou pó de prata e ferro no valor de 100 po, consumidos)",
+duracao: "1 hora",
+descricao: ``
+},
+
+{
+nome: "Clarividência",
+circulo: "3",
+classes: ["Bardo", "Clérigo", "Feiticeiro", "Mago"],
+escola: "Adivinhação",
+tempo: "10 minutos",
+alcance: "1,5 km",
+componentes: "V, S, M (um foco no valor mínimo de 100 po, como um cristal, bola de vidro ou espelho)",
+duracao: "Concentração, até 10 minutos",
+descricao: ``
+},
+
+{
+nome: "Comando",
+circulo: "1",
+classes: ["Clérigo", "Paladino"],
+escola: "Encantamento",
+tempo: "1 ação",
+alcance: "18 metros",
+componentes: "V",
+duracao: "1 rodada",
+descricao: ``
+},
+
+{
+nome: "Compreender Idiomas",
+circulo: "1",
+classes: ["Bardo", "Bruxo", "Mago"],
+escola: "Adivinhação",
+tempo: "1 ação (ritual)",
+alcance: "Pessoal",
+componentes: "V, S, M (uma pitada de fuligem e sal)",
+duracao: "1 hora",
+descricao: ``
+},
+
+{
+nome: "Conjurar Animais",
+circulo: "3",
+classes: ["Druida", "Patrulheiro"],
+escola: "Conjuração",
+tempo: "1 ação",
+alcance: "18 metros",
+componentes: "V, S",
+duracao: "Concentração, até 1 hora",
+descricao: ``
+},
+
+{
+nome: "Conjurar Elemental",
+circulo: "5",
+classes: ["Druida", "Mago"],
+escola: "Conjuração",
+tempo: "1 minuto",
+alcance: "27 metros",
+componentes: "V, S, M (incenso queimando para ar, argila macia para terra, enxofre e fósforo para fogo ou água e areia para água)",
+duracao: "Concentração, até 1 hora",
+descricao: ``
+},
+
+{
+nome: "Contra-mágica",
+circulo: "3",
+classes: ["Feiticeiro", "Bruxo", "Mago"],
+escola: "Abjuração",
+tempo: "1 reação",
+alcance: "18 metros",
+componentes: "S",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Criar Alimentos e Água",
+circulo: "3",
+classes: ["Clérigo", "Paladino"],
+escola: "Conjuração",
+tempo: "1 ação",
+alcance: "9 metros",
+componentes: "V, S",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Curar Ferimentos",
+circulo: "1",
+classes: ["Bardo", "Clérigo", "Druida", "Paladino", "Patrulheiro"],
+escola: "Evocação",
+tempo: "1 ação",
+alcance: "Toque",
+componentes: "V, S",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Curar Ferimentos em Massa",
+circulo: "5",
+classes: ["Bardo", "Clérigo", "Druida"],
+escola: "Evocação",
+tempo: "1 ação",
+alcance: "18 metros",
+componentes: "V, S",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Detectar Magia",
+circulo: "1",
+classes: ["Bardo", "Clérigo", "Druida", "Paladino", "Feiticeiro", "Mago"],
+escola: "Adivinhação",
+tempo: "1 ação (ritual)",
+alcance: "Pessoal",
+componentes: "V, S",
+duracao: "Concentração, até 10 minutos",
+descricao: ``
+},
+
+{
+nome: "Detectar Pensamentos",
+circulo: "2",
+classes: ["Bardo", "Feiticeiro", "Mago"],
+escola: "Adivinhação",
+tempo: "1 ação",
+alcance: "Pessoal",
+componentes: "V, S, M (uma moeda de cobre)",
+duracao: "Concentração, até 1 minuto",
+descricao: ``
+},
+
+{
+nome: "Dissipar Magia",
+circulo: "3",
+classes: ["Bardo", "Clérigo", "Druida", "Feiticeiro", "Mago", "Paladino"],
+escola: "Abjuração",
+tempo: "1 ação",
+alcance: "36 metros",
+componentes: "V, S",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Dissipar o Bem e o Mal",
+circulo: "5",
+classes: ["Clérigo", "Paladino"],
+escola: "Abjuração",
+tempo: "1 ação",
+alcance: "Pessoal",
+componentes: "V, S",
+duracao: "Concentração, até 1 minuto",
+descricao: ``
+},
+
+{
+nome: "Escudo",
+circulo: "1",
+classes: ["Feiticeiro", "Mago"],
+escola: "Abjuração",
+tempo: "1 reação",
+alcance: "Pessoal",
+componentes: "V, S",
+duracao: "1 rodada",
+descricao: ``
+},
+
+{
+nome: "Escuridão",
+circulo: "2",
+classes: ["Feiticeiro", "Bruxo", "Mago"],
+escola: "Evocação",
+tempo: "1 ação",
+alcance: "18 metros",
+componentes: "V, M (pelo de morcego e uma gota de piche ou carvão)",
+duracao: "Concentração, até 10 minutos",
+descricao: ``
+},
+
+{
+nome: "Esfera Flamejante",
+circulo: "2",
+classes: ["Druida", "Feiticeiro", "Mago"],
+escola: "Conjuração",
+tempo: "1 ação",
+alcance: "18 metros",
+componentes: "V, S, M (um pouco de gordura, um pedaço de enxofre e uma mecha de lã)",
+duracao: "Concentração, até 1 minuto",
+descricao: ``
+},
+
+{
+nome: "Espelho Mágico",
+circulo: "2",
+classes: ["Feiticeiro", "Mago"],
+escola: "Ilusão",
+tempo: "1 ação",
+alcance: "Pessoal",
+componentes: "V, S",
+duracao: "1 minuto",
+descricao: ``
+},
+
+{
+nome: "Falar com Animais",
+circulo: "1",
+classes: ["Bardo", "Druida", "Patrulheiro"],
+escola: "Adivinhação",
+tempo: "1 ação (ritual)",
+alcance: "Pessoal",
+componentes: "V, S",
+duracao: "10 minutos",
+descricao: ``
+},
+
+{
+nome: "Falar com Mortos",
+circulo: "3",
+classes: ["Bardo", "Clérigo"],
+escola: "Necromancia",
+tempo: "1 ação",
+alcance: "3 metros",
+componentes: "V, S, M (incenso queimando)",
+duracao: "10 minutos",
+descricao: ``
+},
+
+{
+nome: "Fascinar Pessoa",
+circulo: "1",
+classes: ["Bardo", "Feiticeiro", "Bruxo", "Mago"],
+escola: "Encantamento",
+tempo: "1 ação",
+alcance: "9 metros",
+componentes: "V, S",
+duracao: "1 hora",
+descricao: ``
+},
+
+{
+nome: "Flecha Ácida de Melf",
+circulo: "2",
+classes: ["Mago"],
+escola: "Evocação",
+tempo: "1 ação",
+alcance: "27 metros",
+componentes: "V, S, M (pó de ruibarbo e o estômago de uma víbora)",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Flutuar",
+circulo: "2",
+classes: ["Feiticeiro", "Mago"],
+escola: "Transmutação",
+tempo: "1 ação",
+alcance: "18 metros",
+componentes: "V, S, M (um pequeno laço de couro ou fio de ouro dobrado)",
+duracao: "Concentração, até 10 minutos",
+descricao: ``
+},
+
+{
+nome: "Forma Gasosa",
+circulo: "3",
+classes: ["Feiticeiro", "Bruxo", "Mago"],
+escola: "Transmutação",
+tempo: "1 ação",
+alcance: "Toque",
+componentes: "V, S, M (um pouco de gaze e uma nuvem de fumaça)",
+duracao: "Concentração, até 1 hora",
+descricao: ``
+},
+
+{
+nome: "Fogo das Fadas",
+circulo: "1",
+classes: ["Bardo", "Druida"],
+escola: "Evocação",
+tempo: "1 ação",
+alcance: "18 metros",
+componentes: "V",
+duracao: "Concentração, até 1 minuto",
+descricao: ``
+},
+
+{
+nome: "Glifo de Proteção",
+circulo: "3",
+classes: ["Bardo", "Clérigo", "Mago"],
+escola: "Abjuração",
+tempo: "1 hora",
+alcance: "Toque",
+componentes: "V, S, M (incenso e pó de diamante no valor de 200 po, consumidos)",
+duracao: "Até ser dissipado ou ativado",
+descricao: ``
+},
+
+{
+nome: "Golpe Trovejante",
+circulo: "1",
+classes: ["Paladino"],
+escola: "Evocação",
+tempo: "1 ação bônus",
+alcance: "Pessoal",
+componentes: "V",
+duracao: "Concentração, até 1 minuto",
+descricao: ``
+},
+
+{
+nome: "Identificar",
+circulo: "1",
+classes: ["Bardo", "Mago"],
+escola: "Adivinhação",
+tempo: "1 minuto (ritual)",
+alcance: "Toque",
+componentes: "V, S, M (uma pérola no valor de pelo menos 100 po e uma pena de coruja)",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Ilusão Menor",
+circulo: "0",
+classes: ["Bardo", "Bruxo", "Feiticeiro", "Mago"],
+escola: "Ilusão",
+tempo: "1 ação",
+alcance: "9 metros",
+componentes: "S, M (um pedaço de lã)",
+duracao: "1 minuto",
+descricao: ``
+},
+
+{
+nome: "Ilusão Maior",
+circulo: "3",
+classes: ["Bardo", "Feiticeiro", "Mago"],
+escola: "Ilusão",
+tempo: "1 ação",
+alcance: "36 metros",
+componentes: "V, S, M (um pouco de lã)",
+duracao: "Concentração, até 10 minutos",
+descricao: ``
+},
+
+{
+nome: "Imagem Espelhada",
+circulo: "2",
+classes: ["Feiticeiro", "Mago"],
+escola: "Ilusão",
+tempo: "1 ação",
+alcance: "Pessoal",
+componentes: "V, S",
+duracao: "1 minuto",
+descricao: ``
+},
+
+{
+nome: "Imobilizar Pessoa",
+circulo: "2",
+classes: ["Bardo", "Clérigo", "Feiticeiro", "Bruxo", "Mago"],
+escola: "Encantamento",
+tempo: "1 ação",
+alcance: "18 metros",
+componentes: "V, S, M (um pequeno pedaço de ferro reto)",
+duracao: "Concentração, até 1 minuto",
+descricao: ``
+},
+
+{
+nome: "Imunidade a Veneno",
+circulo: "2",
+classes: ["Clérigo", "Druida", "Paladino"],
+escola: "Abjuração",
+tempo: "1 ação",
+alcance: "Toque",
+componentes: "V, S",
+duracao: "1 hora",
+descricao: ``
+},
+
+{
+nome: "Invisibilidade",
+circulo: "2",
+classes: ["Bardo", "Feiticeiro", "Bruxo", "Mago"],
+escola: "Ilusão",
+tempo: "1 ação",
+alcance: "Toque",
+componentes: "V, S, M (um cílio envolto em goma arábica)",
+duracao: "Concentração, até 1 hora",
+descricao: ``
+},
+
+{
+nome: "Invisibilidade Maior",
+circulo: "4",
+classes: ["Bardo", "Feiticeiro", "Mago"],
+escola: "Ilusão",
+tempo: "1 ação",
+alcance: "Toque",
+componentes: "V, S",
+duracao: "Concentração, até 1 minuto",
+descricao: ``
+},
+
+{
+nome: "Levitação",
+circulo: "2",
+classes: ["Feiticeiro", "Mago"],
+escola: "Transmutação",
+tempo: "1 ação",
+alcance: "18 metros",
+componentes: "V, S, M (um pequeno laço de couro ou fio de ouro dobrado)",
+duracao: "Concentração, até 10 minutos",
+descricao: ``
+},
+
+{
+nome: "Luz",
+circulo: "0",
+classes: ["Bardo", "Clérigo", "Feiticeiro", "Mago"],
+escola: "Evocação",
+tempo: "1 ação",
+alcance: "Toque",
+componentes: "V, M (um vaga-lume ou musgo fosforescente)",
+duracao: "1 hora",
+descricao: ``
+},
+
+{
+nome: "Luz do Dia",
+circulo: "3",
+classes: ["Clérigo", "Druida", "Paladino", "Patrulheiro"],
+escola: "Evocação",
+tempo: "1 ação",
+alcance: "18 metros",
+componentes: "V, S",
+duracao: "1 hora",
+descricao: ``
+},
+
+{
+nome: "Mãos Flamejantes",
+circulo: "1",
+classes: ["Feiticeiro", "Mago"],
+escola: "Evocação",
+tempo: "1 ação",
+alcance: "Pessoal (cone de 4,5 metros)",
+componentes: "V, S",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Mísseis Mágicos",
+circulo: "1",
+classes: ["Feiticeiro", "Mago"],
+escola: "Evocação",
+tempo: "1 ação",
+alcance: "36 metros",
+componentes: "V, S",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Metamorfose",
+circulo: "4",
+classes: ["Bardo", "Druida", "Feiticeiro", "Mago"],
+escola: "Transmutação",
+tempo: "1 ação",
+alcance: "18 metros",
+componentes: "V, S, M (um casulo de lagarta)",
+duracao: "Concentração, até 1 hora",
+descricao: ``
+},
+
+{
+nome: "Moldar Terra",
+circulo: "0",
+classes: ["Druida"],
+escola: "Transmutação",
+tempo: "1 ação",
+alcance: "9 metros",
+componentes: "S",
+duracao: "Instantânea ou 1 hora",
+descricao: ``
+},
+
+{
+nome: "Muralha de Fogo",
+circulo: "4",
+classes: ["Druida", "Feiticeiro", "Mago"],
+escola: "Evocação",
+tempo: "1 ação",
+alcance: "36 metros",
+componentes: "V, S, M (um pequeno pedaço de fósforo)",
+duracao: "Concentração, até 1 minuto",
+descricao: ``
+},
+
+{
+nome: "Muralha de Pedra",
+circulo: "5",
+classes: ["Druida", "Mago"],
+escola: "Evocação",
+tempo: "1 ação",
+alcance: "36 metros",
+componentes: "V, S, M (um pequeno bloco de granito)",
+duracao: "Concentração, até 10 minutos",
+descricao: ``
+},
+
+{
+nome: "Muralha de Força",
+circulo: "5",
+classes: ["Mago"],
+escola: "Evocação",
+tempo: "1 ação",
+alcance: "36 metros",
+componentes: "V, S, M (um pedaço de vidro transparente)",
+duracao: "Concentração, até 10 minutos",
+descricao: ``
+},
+
+{
+nome: "Névoa Obscurecente",
+circulo: "1",
+classes: ["Druida", "Feiticeiro", "Mago"],
+escola: "Conjuração",
+tempo: "1 ação",
+alcance: "36 metros",
+componentes: "V, S",
+duracao: "Concentração, até 1 hora",
+descricao: ``
+},
+
+{
+nome: "Palavra Curativa",
+circulo: "1",
+classes: ["Bardo", "Clérigo", "Druida"],
+escola: "Evocação",
+tempo: "1 ação bônus",
+alcance: "18 metros",
+componentes: "V",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Passo Nebuloso",
+circulo: "2",
+classes: ["Feiticeiro", "Bruxo", "Mago"],
+escola: "Conjuração",
+tempo: "1 ação bônus",
+alcance: "Pessoal",
+componentes: "V",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Pele de Pedra",
+circulo: "4",
+classes: ["Druida", "Feiticeiro", "Mago"],
+escola: "Abjuração",
+tempo: "1 ação",
+alcance: "Toque",
+componentes: "V, S, M (pó de diamante no valor de 100 po, consumido)",
+duracao: "Concentração, até 1 hora",
+descricao: ``
+},
+
+{
+nome: "Porta Dimensional",
+circulo: "4",
+classes: ["Bardo", "Feiticeiro", "Mago"],
+escola: "Conjuração",
+tempo: "1 ação",
+alcance: "150 metros",
+componentes: "V",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Prestidigitação",
+circulo: "0",
+classes: ["Bardo", "Bruxo", "Feiticeiro", "Mago"],
+escola: "Transmutação",
+tempo: "1 ação",
+alcance: "3 metros",
+componentes: "V, S",
+duracao: "Até 1 hora",
+descricao: ``
+},
+
+{
+nome: "Proteção contra Energia",
+circulo: "3",
+classes: ["Clérigo", "Druida", "Patrulheiro"],
+escola: "Abjuração",
+tempo: "1 ação",
+alcance: "Toque",
+componentes: "V, S",
+duracao: "Concentração, até 1 hora",
+descricao: ``
+},
+
+{
+nome: "Proteção contra o Bem e o Mal",
+circulo: "1",
+classes: ["Clérigo", "Paladino"],
+escola: "Abjuração",
+tempo: "1 ação",
+alcance: "Toque",
+componentes: "V, S, M (água benta ou pó de prata e ferro, consumidos)",
+duracao: "Concentração, até 10 minutos",
+descricao: ``
+},
+
+{
+nome: "Raio de Gelo",
+circulo: "0",
+classes: ["Feiticeiro", "Mago"],
+escola: "Evocação",
+tempo: "1 ação",
+alcance: "18 metros",
+componentes: "V, S",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Raio de Fogo",
+circulo: "0",
+classes: ["Feiticeiro", "Mago"],
+escola: "Evocação",
+tempo: "1 ação",
+alcance: "36 metros",
+componentes: "V, S",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Relâmpago",
+circulo: "3",
+classes: ["Feiticeiro", "Mago"],
+escola: "Evocação",
+tempo: "1 ação",
+alcance: "30 metros (linha)",
+componentes: "V, S, M (um pedaço de pele de animal e uma haste de vidro)",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Restauração Menor",
+circulo: "2",
+classes: ["Bardo", "Clérigo", "Druida", "Paladino", "Patrulheiro"],
+escola: "Abjuração",
+tempo: "1 ação",
+alcance: "Toque",
+componentes: "V, S",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Restauração Maior",
+circulo: "5",
+classes: ["Bardo", "Clérigo", "Druida"],
+escola: "Abjuração",
+tempo: "1 ação",
+alcance: "Toque",
+componentes: "V, S, M (pó de diamante no valor de 100 po, consumido)",
+duracao: "Instantânea",
+descricao: ``
+},
+
+{
+nome: "Silêncio",
+circulo: "2",
+classes: ["Bardo", "Clérigo", "Patrulheiro"],
+escola: "Ilusão",
+tempo: "1 ação (ritual)",
+alcance: "36 metros",
+componentes: "V, S",
+duracao: "Concentração, até 10 minutos",
+descricao: ``
+},
+
+{
+nome: "Sono",
+circulo: "1",
+classes: ["Bardo", "Feiticeiro", "Mago"],
+escola: "Encantamento",
+tempo: "1 ação",
+alcance: "27 metros",
+componentes: "V, S, M (uma pitada de areia fina, pétalas de rosa ou um grilo)",
+duracao: "1 minuto",
+descricao: ``
+},
+
+{
+nome: "Sugestão",
+circulo: "2",
+classes: ["Bardo", "Feiticeiro", "Bruxo", "Mago"],
+escola: "Encantamento",
+tempo: "1 ação",
+alcance: "9 metros",
+componentes: "V, M (uma língua de cobra e um pedaço de favo de mel ou uma gota de óleo doce)",
+duracao: "Concentração, até 8 horas",
+descricao: ``
+},
+
+{
+nome: "Teia",
+circulo: "2",
+classes: ["Feiticeiro", "Mago"],
+escola: "Conjuração",
+tempo: "1 ação",
+alcance: "18 metros",
+componentes: "V, S, M (um pouco de teia de aranha)",
+duracao: "Concentração, até 1 hora",
+descricao: ``
+},
+
+{
+nome: "Toque Vampírico",
+circulo: "3",
+classes: ["Bruxo", "Mago"],
+escola: "Necromancia",
+tempo: "1 ação",
+alcance: "Pessoal",
+componentes: "V, S",
+duracao: "Concentração, até 1 minuto",
+descricao: ``
+},
+
+{
+nome: "Truque de Corda",
+circulo: "2",
+classes: ["Mago"],
+escola: "Transmutação",
+tempo: "1 ação",
+alcance: "Toque",
+componentes: "V, S, M (pó de milho e uma corda)",
+duracao: "1 hora",
+descricao: ``
+},
+{
+nome: "Velocidade",
+circulo: "3",
+classes: ["Feiticeiro", "Mago"],
+escola: "Transmutação",
+tempo: "1 ação",
+alcance: "9 metros",
+componentes: "V, S, M (uma lasca de raiz de alcaçuz)",
+duracao: "Concentração, até 1 minuto",
+descricao: ``
+},
+
+{
+nome: "Voo",
+circulo: "3",
+classes: ["Feiticeiro", "Mago", "Bruxo"],
+escola: "Transmutação",
+tempo: "1 ação",
+alcance: "Toque",
+componentes: "V, S, M (uma pena da asa de qualquer ave)",
+duracao: "Concentração, até 10 minutos",
+descricao: ``
+},
+
+{
+nome: "Visão no Escuro",
+circulo: "2",
+classes: ["Druida", "Feiticeiro", "Mago", "Patrulheiro"],
+escola: "Transmutação",
+tempo: "1 ação",
+alcance: "Toque",
+componentes: "V, S, M (um pedaço de cenoura seca)",
+duracao: "8 horas",
+descricao: ``
+},
+
+{
+nome: "Zona da Verdade",
+circulo: "2",
+classes: ["Clérigo", "Paladino"],
+escola: "Encantamento",
+tempo: "1 ação",
+alcance: "18 metros",
+componentes: "V, S",
+duracao: "10 minutos",
+descricao: ``
 }
 
 ];
@@ -542,8 +1436,15 @@ function getCircleClass(c) {
 function showSpell(spell) {
     document.getElementById("name").textContent = spell.nome;
 
-    document.getElementById("subinfo").textContent =
-        `Círculo ${spell.circulo} • ${spell.classes.join(", ")}`;
+    document.getElementById("subinfo").innerHTML = `
+        <strong>${spell.circulo == 0 ? "Truque" : spell.circulo + "º círculo"}</strong> • ${spell.escola}<br><br>
+
+        <strong>Tempo:</strong> ${spell.tempo}<br>
+        <strong>Alcance:</strong> ${spell.alcance}<br>
+        <strong>Componentes:</strong> ${spell.componentes}<br>
+        <strong>Duração:</strong> ${spell.duracao}<br>
+        <strong>Classes:</strong> ${spell.classes.join(", ")}
+    `;
 
     document.getElementById("desc").textContent = spell.descricao;
 }
